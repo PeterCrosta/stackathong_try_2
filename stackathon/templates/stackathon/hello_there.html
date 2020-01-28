@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hello, Django</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'stackathon/site.css' %}" />
+    </head>
+    <body>
+        <span class='message' >Hello there, {{ user_id }}!</span> It's  a terrible day in the neighborhood
+    </body>
+</html>

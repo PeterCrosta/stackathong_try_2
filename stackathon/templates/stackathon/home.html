@@ -1,0 +1,32 @@
+{% extends "stackathon/layout.html" %}
+{% block title %}
+home
+{% endblock %}
+{% block content %}
+<h2>User Info</h2>
+
+    {% if user %}
+        <table class="message_list">
+            <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Birthday</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- {% for message in message_list %} -->
+                <tr>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.last_name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.birthday }}</td>
+                </tr>
+            <!-- {% endfor %} -->
+            </tbody>
+        </table>
+    {% else %}
+        <p>No messages have been logged. Use the <a href="{% url 'log' %}">Log Message form</a>.</p>
+    {% endif %}
+{% endblock %}
